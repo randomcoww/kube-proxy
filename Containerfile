@@ -23,5 +23,6 @@ RUN set -x \
   && apk add --no-cache \
     conntrack-tools \
     nftables \
+    iptables \
     ipset \
     kmod
