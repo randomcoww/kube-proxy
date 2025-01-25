@@ -17,7 +17,7 @@ RUN set -x \
 
 FROM alpine:edge
 
-COPY --from=BUILD /go/src/kubernetes/_output/bin/ /usr/local/bin
+COPY --from=BUILD /go/src/kubernetes/_output/bin/kube-proxy /usr/local/bin
 RUN set -x \
   \
   && apk add --no-cache \
