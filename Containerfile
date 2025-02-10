@@ -1,5 +1,5 @@
 FROM golang:alpine as BUILD
-ARG VERSION=1.32.1
+ARG VERSION=v1.32.1
 
 WORKDIR /go/src
 RUN set -x \
@@ -10,7 +10,7 @@ RUN set -x \
     bash \
     rsync \
   \
-  && git clone -b v$VERSION https://github.com/kubernetes/kubernetes.git \
+  && git clone -b $VERSION https://github.com/kubernetes/kubernetes.git \
   && cd kubernetes \
   && make \
     kube-proxy
